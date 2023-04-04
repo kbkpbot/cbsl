@@ -3,6 +3,8 @@
 wrapper of CBSL
 check v-test for a v test example.
 
+You can use this library save a big vlang array to a file which is compressed by ZSTD, and then you can read it back to an array.
+
 write array.data
 
 read array.data
