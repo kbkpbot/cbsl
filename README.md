@@ -1,3 +1,12 @@
+# CBSL: A Vlang wrapper for Compressed Binary Serialization Library
+
+wrapper of CBSL
+check v-test for a v test example.
+
+write array.data
+read array.data
+
+
 # CBSL: Compressed Binary Serialization Library
 
 ## What's this?
