@@ -28,7 +28,6 @@ struct C.cbsl_ctx {
 }
 
 fn C.cbsl_open(mode CBSL_MODE, filename &char) &C.cbsl_ctx
-fn C.cbsl_readline(ctx voidptr, linebuf &char, size int) CBSL_ERRORS
 fn C.cbsl_read(ctx voidptr, data voidptr, size u64) CBSL_ERRORS
 fn C.cbsl_write(ctx voidptr, data voidptr, size u64) CBSL_ERRORS
 fn C.cbsl_close(ctx voidptr) CBSL_ERRORS
@@ -40,11 +39,6 @@ pub fn cbsl_open(mod CBSL_MODE, filename string) voidptr {
 [inline]
 pub fn cbsl_write(ctx voidptr, data voidptr, size u64) CBSL_ERRORS {
 	return C.cbsl_write(ctx, data, size)
-}
-
-[inline]
-pub fn cbsl_readline(ctx voidptr, linebuf &char, size u64) CBSL_ERRORS {
-	return C.cbsl_readline(ctx, linebuf, size)
 }
 
 [inline]
