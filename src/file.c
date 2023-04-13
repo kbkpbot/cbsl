@@ -50,6 +50,7 @@ cbsl_ctx* cbsl_open(cbsl_mode mode, char* path)
   ctx->fp   = fp;
   CBSL_CHECK_COND_AND_RETURN(create_streaming_buffers(ctx) == cbsl_success, cbsl_open_safe_finalize(&ctx));
 
+  /*
   uint64_t file_version;
   if (mode == cbsl_load_mode)
   {
@@ -62,6 +63,7 @@ cbsl_ctx* cbsl_open(cbsl_mode mode, char* path)
     file_version = CBSL_VERSION;
     CBSL_CHECK_COND_AND_RETURN(cbsl_write(ctx, &file_version, sizeof(file_version)) == cbsl_success, cbsl_open_safe_finalize(&ctx));
   }
+  */
 
   return ctx;
 }
