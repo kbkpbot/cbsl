@@ -1,7 +1,9 @@
 module cbsl
 
-#flag -lzstd
 #flag -I @VMODROOT/include
+
+#flag windows -I @VMODROOT/windows -L @VMODROOT/windows
+#flag -lzstd
 #flag @VMODROOT/src/buffer.o
 #flag @VMODROOT/src/file.o
 #flag @VMODROOT/src/flush.o
