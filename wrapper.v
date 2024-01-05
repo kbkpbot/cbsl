@@ -38,17 +38,17 @@ pub fn cbsl_open(mod CBSL_MODE, filename string) voidptr {
 	return C.cbsl_open(mod, filename.str)
 }
 
-[inline]
+@[inline]
 pub fn cbsl_write(ctx voidptr, data voidptr, size u64) CBSL_ERRORS {
 	return C.cbsl_write(ctx, data, size)
 }
 
-[inline]
+@[inline]
 pub fn cbsl_read(ctx voidptr, data voidptr, size u64) CBSL_ERRORS {
 	return C.cbsl_read(ctx, data, size)
 }
 
-[inline]
+@[inline]
 pub fn cbsl_close(ctx voidptr) CBSL_ERRORS {
 	return C.cbsl_close(ctx)
 }
